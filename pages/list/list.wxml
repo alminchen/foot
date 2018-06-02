@@ -1,0 +1,26 @@
+<view>
+  <loading hidden="{{loadingHide}}">
+    加载中...
+  </loading>
+
+  <scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="" lower-threshold="100">
+    <block wx:for="{{footList}}" wx:key="*this">
+      <view class="item-ans">
+        <view class="avatar">
+          <image class="img" src="{{item.pic}}"></image>
+        </view>
+        <view class="expertInfo">
+          <view class="name">{{item.name}}
+            <text class='peopelEat'>{{item.peoplenum}}</text>
+          </view>
+          <view class="tag">
+            <text>烹饪时间：</text> {{item.cookingtime}}</view>
+          <view class="answerHistory">
+            <text>标签：</text> {{item.tag}} </view>
+        </view>
+        <navigator url="/pages/detail/detail?id={{item.id}}" class="askBtn">详情</navigator>
+        <!-- <text class="askBtn" bindtap='switchAparams' data-id='{{item.classid}}'>食谱</text> -->
+      </view>
+    </block>
+  </scroll-view>
+</view>

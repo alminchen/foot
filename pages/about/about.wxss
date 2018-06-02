@@ -1,0 +1,49 @@
+/* pages/about/about.wxss */
+.list{
+  /* height: 584rpx; */
+  background-color: #ffffff;
+  margin-bottom: 20rpx;
+}
+.list view{
+  /* border-bottom: 1rpx solid #eeeeee; */
+  height: 98rpx;
+  line-height: 98rpx; 
+  display: block;
+  position: relative;
+}
+.list view:before{
+position: absolute;
+  left: 4%;
+  bottom:3%;
+  content: "";
+  /* color: red; */
+  background-color: #eeeeee;
+  height: 1rpx;
+  width: 718rpx;
+}
+  
+.list view text{
+  float: left;
+  display: block;
+  width: 160rpx;
+  font-size: 30rpx;
+  font-family: 微软雅黑;
+  text-align: center;
+}
+.list view image:nth-child(1){
+  width: 48rpx;
+  height: 48rpx;
+  display: block;
+  padding-left: 41rpx;
+  padding-top: 23rpx;
+  float: left;
+  
+}
+.list view .pic_2{
+  width: 20rpx;
+  height: 20rpx;
+  display: block;
+  float: right;
+  margin-right: 42rpx;
+  padding-top: 35rpx;
+}

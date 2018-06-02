@@ -1,0 +1,108 @@
+/* pages/search/search.wxss */
+.search{
+  padding: 0 20rpx;
+  height: 90rpx;
+  position: relative;
+  
+}
+.search input{
+  border: 1px solid #ddd;
+  /* padding-right: 20px; */
+  height: 100%;
+  padding: 0 20px 0 20px;
+}
+.icon-search-20{
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  margin-top: -15rpx;
+  z-index: 111
+}
+.item-ans {
+  width: 100%;
+  display: flex;
+  flex-grow: row no-wrap;
+  justify-content: space-between;
+  padding: 30rpx;
+  box-sizing: border-box;
+  /* height: 180rpx; */
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+  position: relative
+}
+
+.avatar {
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+  padding-right: 30rpx;
+  border-radius: 50%
+}
+
+.avatar .img {
+  width: 100%;
+  display: block;
+  margin: auto;
+  height: 100%;
+  border-radius: 50%
+}
+
+.avatar .doyen {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  bottom: -2px;
+  right: 20rpx;
+}
+
+.expertInfo {
+  font-size: 12px;
+  flex-grow: 2;
+  color: #b0b0b0;
+  line-height: 1.5em;
+}
+
+.expertInfo .name {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 6px;
+}
+
+.name .peopelEat{
+  margin-left: 50rpx;
+  color: #333;
+  font-size: 12px;
+}
+.askBtn {
+  width: 120rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 60rpx;
+  border: 1px solid #4675f9;
+  color: #4675f9;
+  position: absolute;
+  right: 50rpx;
+  top: 20rpx
+}
+
+.tab-content {
+  margin-top: 80rpx;
+}
+
+.scoll-h {
+  height: 100%;
+}
+.fontSize12{
+  font-size: 12px;
+  color: #eee;
+  text-align: center
+}
+.searchOut{
+  display: block;
+  width: 100%;
+  line-height: 90rpx;
+  text-align: center;
+  font-size: 24rpx;
+}

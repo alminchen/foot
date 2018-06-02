@@ -1,0 +1,33 @@
+<view class='detailFoot'>
+  <loading hidden="{{loadingHide}}">
+    加载中...
+  </loading>
+  <view class='img'>
+    <image src='{{dataShow.pic}}'></image>
+  </view>
+  <view class='detailName'>{{dataShow.name}}</view>
+  <view class='nearDo'>
+    <text class='startTime'>准备时间： {{dataShow.preparetime}}</text>
+    <text class='cookTime'>制作时间： {{dataShow.cookingtime}}</text>
+    <text class='howpeople'>分量： {{dataShow.peoplenum}}</text>
+    <text class='inPublic'>适用场合： {{dataShow.tag}}</text>
+  </view>
+  <view class='material'>
+    <text class='matNmae'>用料：</text>
+    <view class='mat_1'>
+      <view  wx:for="{{materList}}" wx:key="*this">
+        <text class='mat_name_1'>{{item.mname}}</text>
+        <text class='heavy'>{{item.amount}}</text>
+      </view>
+    </view>
+  </view>
+  <view class='finally'> 
+    <view class='fina_box' wx:for="{{finaList}}" wx:key="*this">
+      <text class='fina_1'>步骤{{index+1}}</text>
+      <view>
+        <image src='{{item.pic}}'></image>
+        <text class='intro'>{{item.pcontent}}</text>
+      </view>
+    </view>
+  </view>
+</view>

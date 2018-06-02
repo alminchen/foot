@@ -1,0 +1,32 @@
+<!--pages/search/search.wxml-->
+<view class='search'>
+  <input placeholder='请输入您想要查找的蔬菜或者菜谱' placeholder-class="fontSize12" bindinput='searchInput'></input>
+  <block class="icon-search-20">
+    <icon type="search" size="20" class="icon-search-20" bindtap="tapSearch" wx:if="{{seacrhFoot.length == 0}}"/>
+  </block>
+</view>
+<view wx:if="{{seacrhFoot.length > 0}}">
+  <scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="" lower-threshold="100">
+    <block wx:for="{{seacrhFoot}}" wx:key="*this">
+      <view class="item-ans">
+        <view class="avatar">
+          <image class="img" src="{{item.pic}}"></image>
+        </view>
+        <view class="expertInfo">
+          <view class="name">{{item.name}}
+            <text class='peopelEat'>{{item.peoplenum}}</text>
+          </view>
+          <view class="tag">
+            <text>烹饪时间：</text>{{item.cookingtime}}</view>
+          <view class="answerHistory">
+            <text>标签：</text> {{item.tag}}</view>
+        </view>
+        <navigator url="/pages/detail/detail?id={{item.id}}" class="askBtn">详情</navigator>
+        <!-- <text class="askBtn" bindtap='switchAparams' data-id='{{item.classid}}'>食谱</text> -->
+      </view>
+    </block>
+  </scroll-view>
+</view>
+<view wx:else>
+  <text class='searchOut'>没有搜索结果</text>
+</view>

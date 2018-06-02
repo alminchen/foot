@@ -1,0 +1,35 @@
+<view>
+  <loading hidden="{{loadingHide}}">
+    加载中...
+  </loading>
+  <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+    <view wx:for="{{title}}" wx:key="*this" class="tab-item {{currentTab==index?'active':''}}" data-current="{{index}}" bindtap="swichNav">{{item.name}}</view>
+  </scroll-view>
+  <scroll-view scroll-y="true" class="page-body" bindscrolltolower="loadMore" lower-threshold="100">
+
+  </scroll-view>
+  <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
+    <swiper-item wx:for="{{title}}" wx:key="index">
+      <scroll-view scroll-y="true" class="scoll-h" bindscrolltolower="" lower-threshold="100">
+        <block wx:for="{{title[index].list}}" wx:key="*this">
+          <view class="item-ans">
+            <view class="avatar">
+              <image class="img" src="http://ookzqad11.bkt.clouddn.com/avatar.png"></image>
+            </view>
+            <view class="expertInfo">
+              <view class="name">食谱方向--{{item.name}}</view>
+              <!-- <view class="tag">知名情感博主</view> -->
+              <!-- <view class="answerHistory">134个回答，2234人听过 </view> -->
+            </view>
+            <!-- <navigator url="/pages/list/list?id={{item.classid}}" open-type='switchTab' class="askBtn">查看列表</navigator> -->
+            <text class="askBtn" bindtap='switchAparams' data-id='{{item.classid}}'>食谱</text>
+          </view>
+        </block>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+  <view class="loading-view" hidden="{{hideFooter}}">
+    <image src="../../image/loading.gif" style="height:26px;width:26px" />
+    <text style="font-size:20px">正在加载</text>
+  </view>
+</view>
